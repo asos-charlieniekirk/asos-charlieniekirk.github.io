@@ -79,14 +79,6 @@
             checkoutOnCartClick: true, // Trigger .CHECKOUT event when the cart/bag icon is clicked
           });
 
-          const hidePlayerUI = () => {
-            window.player.hideUI();
-          };
-
-          const showPlayerUI = () => {
-            window.player.showUI();
-          };
-
           // Registering event listeners ↓
           player.on(player.EVENT.READY, function () {
             if (isIos) {
@@ -179,6 +171,14 @@
           player.on(player.EVENT.HIDE_PRODUCT_LIST, () => {
             console.log("HIDE_PRODUCT_LIST");
           });
+        };
+
+        const hidePlayerUI = () => {
+          window.player.hideUI();
+        };
+
+        const showPlayerUI = () => {
+          window.player.showUI();
         };
       })();
     </script>
