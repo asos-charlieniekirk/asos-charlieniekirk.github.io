@@ -147,6 +147,10 @@
             }
           });
 
+          player.on(player.EVENT.PLAYER_CONTAINER_UPDATE, (event) => {
+            console.log("PLAYER CONTAINER UPDATE", event);
+          });
+
           // Additional available events
           player.on(player.EVENT.CHECKOUT, (event) => {
             console.log("CHECKOUT", event);
