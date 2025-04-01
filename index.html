@@ -113,8 +113,11 @@
               var testProductUrl = "https://www.asos.com/asos-design/asos-design-slash-neck-culotte-jumpsuit-with-open-tie-back-in-postcard-print/prd/206898275";
               Android.viewProduct(testProductUrl);
 
-              var videoElements = document.getElementsByClassName('video');
-              var video = videoElements[0];
+              var vids = document.getElementsByTagName('video') 
+              // vids is an HTMLCollection
+              for( var i = 0; i < vids.length; i++ ){ 
+                  console.log( vids.item(i) )
+              }
               Android.enterPictureInPicture(video.videoWidth, video.videoHeight);
             }
           });
