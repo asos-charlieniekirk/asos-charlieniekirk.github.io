@@ -142,6 +142,9 @@
 
           player.on(player.EVENT.PLAYER_CONTAINER_UPDATE, (event) => {
             console.log("PLAYER CONTAINER UPDATE", event);
+            if (isAndroid) {
+              Android.showToast("The player container has updated!");
+            }
           });
 
           // Additional available events
